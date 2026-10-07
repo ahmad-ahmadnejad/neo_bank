@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* IRANSans (FaNum) — Persian digits built into the FaNum cut (Latin 0–9 → فارسی). */
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/fonts/iransans/IRANSansWeb(FaNum)_UltraLight.eot');
+  src:
+    url('/fonts/iransans/IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/fonts/iransans/IRANSansWeb(FaNum)_Light.eot');
+  src:
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Light.woff2') format('woff2'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Light.woff') format('woff'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/fonts/iransans/IRANSansWeb(FaNum).eot');
+  src:
+    url('/fonts/iransans/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'),
+    url('/fonts/iransans/IRANSansWeb(FaNum).woff2') format('woff2'),
+    url('/fonts/iransans/IRANSansWeb(FaNum).woff') format('woff'),
+    url('/fonts/iransans/IRANSansWeb(FaNum).ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSans';
+  src:
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Medium.woff') format('woff'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/fonts/iransans/IRANSansWeb(FaNum)_Bold.eot');
+  src:
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Bold.woff') format('woff'),
+    url('/fonts/iransans/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Midnight/Slate backgrounds */
+  --color-background: #0A0A0A;
+  --color-surface: #121212;
+  --color-surface-raised: #1A1A1A;
+  
+  /* Foreground text colors */
+  --color-foreground: #FFFFFF;
+  --color-foreground-muted: #A1A1AA;
+
+  /* Accents */
+  --color-primary: #8B5CF6; /* Neon Purple */
+  --color-primary-hover: #7C3AED;
+  --color-success: #10B981; /* Emerald Green */
+
+  /* Glassmorphism Borders */
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+
+  /* Shadows */
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --shadow-neon: 0 0 15px rgba(139, 92, 246, 0.5);
+
+  /* Map font-sans to IRANSans */
+  --font-sans: 'IRANSans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    @apply antialiased selection:bg-primary selection:text-white;
+  }
+}
+
+/* Base custom utilities */
+@utility glass {
+  background-color: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: var(--shadow-glass);
+}
