@@ -35,9 +35,9 @@ export function LandingHero() {
             <span className="text-sm text-white/90 font-medium">دستیار هوشمند مالی شما</span>
           </motion.div>
 
-          <motion.h1 variants={fadeIn} className="text-5xl sm:text-6xl lg:text-[4.5rem] font-extrabold text-white leading-[1.3] mb-8 tracking-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-[4.5rem] font-extrabold text-white leading-[1.3] mb-8 tracking-tight">
             مدیریت مالی <span className="text-transparent bg-clip-text bg-gradient-to-l from-primary to-[#C4B5FD] drop-shadow-sm">هوشمند</span> و بی‌دغدغه
-          </motion.h1>
+          </h1>
 
           <motion.p variants={fadeIn} className="text-lg sm:text-xl text-foreground-muted mb-12 leading-loose max-w-2xl mx-auto lg:mx-0 font-light">
             موجودی حساب‌ها، تراکنش‌ها، دسته‌بندی هزینه‌ها و یادآورهای پرداخت خود را به سادگی در یک نمای یکپارچه مدیریت کنید و همیشه یک قدم جلوتر باشید.
