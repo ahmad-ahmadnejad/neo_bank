@@ -19,38 +19,35 @@ export function LandingHero() {
   return (
     <main className="relative flex-1 flex flex-col justify-center items-center px-6 sm:px-12 pt-32 pb-20 overflow-hidden">
       {/* Dynamic Background Orbs */}
-      <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] bg-primary/20 blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[0%] right-[-5%] w-[500px] h-[500px] bg-success/15 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-[-60px] left-[-30px] w-[600px] h-[600px] bg-primary/20 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-[-30px] w-[500px] h-[500px] bg-success/15 blur-[150px] rounded-full pointer-events-none" />
 
-      <motion.div
+      <div
         className="relative z-10 max-w-7xl w-full flex flex-col lg:flex-row items-center gap-20 lg:gap-12"
-        initial="hidden"
-        animate="visible"
-        variants={stagger}
       >
         {/* Text Content */}
         <section className="flex-1 text-center lg:text-right">
-          <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
             <Bell className="w-4 h-4 text-primary" aria-hidden="true" />
             <span className="text-sm text-white/90 font-medium">دستیار هوشمند مالی شما</span>
-          </motion.div>
+          </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-[4.5rem] font-extrabold text-white leading-[1.3] mb-8 tracking-tight">
             مدیریت مالی <span className="text-transparent bg-clip-text bg-gradient-to-l from-primary to-[#C4B5FD] drop-shadow-sm">هوشمند</span> و بی‌دغدغه
           </h1>
 
-          <motion.p variants={fadeIn} className="text-lg sm:text-xl text-foreground-muted mb-12 leading-loose max-w-2xl mx-auto lg:mx-0 font-light">
+          <p className="text-lg sm:text-xl text-foreground-muted mb-12 leading-loose max-w-2xl mx-auto lg:mx-0 font-light">
             موجودی حساب‌ها، تراکنش‌ها، دسته‌بندی هزینه‌ها و یادآورهای پرداخت خود را به سادگی در یک نمای یکپارچه مدیریت کنید و همیشه یک قدم جلوتر باشید.
-          </motion.p>
+          </p>
 
-          <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <Link href="/login" className="w-full sm:w-auto" tabIndex={-1}>
               <Button size="lg" className="w-full gap-3 group px-8 focus-visible:ring-2 focus-visible:ring-primary">
                 ورود به داشبورد
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1.5 transition-transform duration-300" aria-hidden="true" />
               </Button>
             </Link>
-          </motion.div>
+          </div>
         </section>
 
         {/* Floating Visuals / App Preview Elements */}
@@ -130,7 +127,7 @@ export function LandingHero() {
             </Card>
           </motion.div>
         </figure>
-      </motion.div>
+      </div>
     </main>
   );
 }
