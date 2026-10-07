@@ -54,9 +54,8 @@ export function LandingHero() {
         </section>
 
         {/* Floating Visuals / App Preview Elements */}
-        <motion.figure
+        <figure
           className="flex-1 relative w-full max-w-lg aspect-[4/3] lg:aspect-square flex items-center justify-center"
-          variants={fadeIn}
           aria-label="پیش‌نمایش امکانات اپلیکیشن"
         >
           {/* Main Balance Card */}
@@ -130,7 +129,7 @@ export function LandingHero() {
               </div>
             </Card>
           </motion.div>
-        </motion.figure>
+        </figure>
       </motion.div>
     </main>
   );
